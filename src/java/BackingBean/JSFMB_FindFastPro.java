@@ -27,11 +27,14 @@ public class JSFMB_FindFastPro implements Serializable{
     private List<Cliente> ListaClientes;
     private Cliente cliente;
     
+    private String fechaNacimiento;
+    
     public JSFMB_FindFastPro() {
     }
     
     //CODIGO PARA AGREGAR A UN CLIENTE
     public void grabarCliente() {
+        cliente.setFechanacimiento(fechaNacimiento);
         manejadorCliente.create(cliente);
         this.ListaClientes();
         //this.recuperarCliente();
@@ -70,6 +73,14 @@ public class JSFMB_FindFastPro implements Serializable{
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public String getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(String fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
         
 }
