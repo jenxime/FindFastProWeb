@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>lista de clientes</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+            <p:dataTable var="ind_cliente" value="#{JSFMB_FindFastPro.listaClientes}" paginator="true" rows="10" >
+                <f:facet name="header">
+                    Lista de Clientes
+                </f:facet>
+                <p:column  sortBy="#{ind_cliente}" headerText="Nombre">
+                    <h:outputText value="#{ind_cliente.nombre}">                         
+                    </h:outputText>   
+                </p:column>
+                <p:column  headerText="Apellido">
+                    <h:outputText value="#{ind_cliente.apellido}">                         
+                    </h:outputText>   
+                </p:column>
+                <p:column headerText="Usuario">
+                    <h:outputText value="#{ind_cliente.usuario}">                         
+                    </h:outputText>   
+                </p:column>
+                <p:column headerText="Clave">
+                    <h:outputText value="#{ind_cliente.clave}">                         
+                    </h:outputText>   
+                </p:column>
+                <!--<f:facet name="footer">
+                    En total tenemos {fn:length(JSFManagedBean_Sistema_Bancario.listarCliente)} clientes.
+                </f:facet>-->
+            </p:dataTable>
+        </h:body>
+    </f:view>
+</html>
+
