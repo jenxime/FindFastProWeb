@@ -18,12 +18,16 @@
                 <f:facet name="header">
                     Lista de Clientes
                 </f:facet>
-                <p:column  sortBy="#{ind_cliente}" headerText="Nombre">
+                <p:column  sortBy="#{ind_cliente.nombre}" headerText="Nombre">
                     <h:outputText value="#{ind_cliente.nombre}">                         
                     </h:outputText>   
                 </p:column>
                 <p:column  headerText="Apellido">
                     <h:outputText value="#{ind_cliente.apellido}">                         
+                    </h:outputText>   
+                </p:column>
+                <p:column  headerText="Cedula">
+                    <h:outputText value="#{ind_cliente.cedula}">                         
                     </h:outputText>   
                 </p:column>
                 <p:column headerText="Usuario">

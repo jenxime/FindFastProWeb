@@ -5,21 +5,29 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Find Fast</title>
     </h:head>
     <h:body>
         <h:form>  
             <p:growl id="messages"/>
-
             <p:menubar>
                 <p:menuitem value="Find Fast"/>
-
                 <f:facet name="options">
-                    <p:commandButton type="button" value="Ingresar" />
+                    <p:button value="Ingresar" outcome="Registro"/>
                 </f:facet>
             </p:menubar>
         </h:form>
         <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+        <p:dataGrid var="restaurant" value="#{JSFMB_Restaurante.listaRestaurante}" columns="3" rows="12">
+            <p:column>
+                <p:panel header="#{restaurant.ruc}">
+                    <h:panelGrid columns="1">
+                        <p:graphicImage value="/images/cars/#{restaurant.nombre}.jpg"/>
+                        <h:outputText value="#{restaurant.horarioatencion}" />
+                    </h:panelGrid>
+                </p:panel>
+            </p:column>
+        </p:dataGrid>
     </h:body>
 </html>
 

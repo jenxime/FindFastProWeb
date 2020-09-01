@@ -21,8 +21,7 @@ import javax.faces.bean.SessionScoped;
 //@RequestScoped
 @SessionScoped
 public class JSFMB_FindFastPro implements Serializable{
-     //las variables 
-
+    //las variables 
     @EJB
     private ClienteFacadeLocal manejadorCliente;
     private List<Cliente> ListaClientes;
@@ -32,7 +31,6 @@ public class JSFMB_FindFastPro implements Serializable{
     }
     
     //CODIGO PARA AGREGAR A UN CLIENTE
-
     public void grabarCliente() {
         manejadorCliente.create(cliente);
         this.ListaClientes();
@@ -41,7 +39,6 @@ public class JSFMB_FindFastPro implements Serializable{
 
     public void ListaClientes() {
         setListaClientes(manejadorCliente.findAll());
-      
     }
     
     @PostConstruct
@@ -74,7 +71,5 @@ public class JSFMB_FindFastPro implements Serializable{
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
-    
-    
-    
+        
 }
