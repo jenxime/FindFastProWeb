@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-////ORIGINAL
 package BackingBean;
 
 import Entidades.Cliente;
@@ -19,7 +18,6 @@ import javax.faces.bean.SessionScoped;
  * @author Xime
  */
 @ManagedBean(name = "JSFMB_FindFastPro")
-//@RequestScoped
 @SessionScoped
 public class JSFMB_FindFastPro implements Serializable {
     //las variables 
@@ -28,18 +26,14 @@ public class JSFMB_FindFastPro implements Serializable {
     private ClienteFacadeLocal manejadorCliente;
     private List<Cliente> ListaClientes;
     private Cliente cliente;
-    private String fechaNacimiento;
-
+ 
     public JSFMB_FindFastPro() {
     }
 
     //CODIGO PARA AGREGAR A UN CLIENTE
     public void grabarCliente() {
-        System.out.println("Cliente grabado");
-        cliente.setFechanacimiento(fechaNacimiento);
         manejadorCliente.create(cliente);
         this.ListaClientes();
-        //this.recuperarCliente();
     }
 
     public void ListaClientes() {
@@ -75,15 +69,5 @@ public class JSFMB_FindFastPro implements Serializable {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
-    }
-    
-    public String getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-    
-    
+    }       
 }

@@ -31,7 +31,7 @@
                     <p:outputLabel value="Genero" />
                     <p:inputText value="#{JSFMB_FindFastPro.cliente.genero}"/>
                     <p:outputLabel value="Fecha de nacimiento" />
-                    <p:inputText value="#{JSFMB_FindFastPro.fechaNacimiento}"/>
+                    <p:calendar id="fecNac" value="#{JSFMB_FindFastPro.cliente.fechanacimiento}" locale="de" navigator="true" pattern="yyyy-MM-dd"/>
                     <p:outputLabel value="Usuario" />
                     <p:inputText value="#{JSFMB_FindFastPro.cliente.usuario}"/>
                     <p:outputLabel value="Clave" />
