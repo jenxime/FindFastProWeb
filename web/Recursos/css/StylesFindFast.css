@@ -1,0 +1,45 @@
+/* 
+    Document   : StylesFindFast
+    Created on : Sep 2, 2020, 5:24:53 PM
+    Author     : Xime
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+    width: 800px;
+    margin: 0 auto;
+    font-family: Arial,"Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff;
+}
+
+body{
+    width: 800px;
+    margin: 0 auto;
+    font-family: Arial,"Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff;
+}
+
+#Principal #data #Panel #Panel1{
+    font-family: Arial,"Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff;
+    
+    
+}
+
