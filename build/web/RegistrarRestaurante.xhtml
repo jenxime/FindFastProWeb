@@ -29,14 +29,10 @@
                     <p:outputLabel value="Correo Electronico" />
                     <p:inputText value="#{JSFMB_Restaurante.restaurante.correo}"/>
                     <p:outputLabel value="Descripcion" />
-                    <p:inputText value="#{JSFMB_FindFastPro.cliente.genero}"/>
-                    <p:outputLabel value="Fecha de nacimiento" />
-                    <p:inputText value="#{JSFMB_FindFastPro.fechaNacimiento}"/>
-                    <p:outputLabel value="Usuario" />
-                    <p:inputText value="#{JSFMB_FindFastPro.cliente.usuario}"/>
-                    <p:outputLabel value="Clave" />
-                    <p:inputText value="#{JSFMB_FindFastPro.cliente.clave}"/>
-                    <p:commandButton value="Registrar" id="btnCliente" action="#{JSFMB_FindFastPro.grabarCliente()}"/>
+                    <p:inputText value="#{JSFMB_Restaurante.restaurante.descripcion}"/>
+                    <p:outputLabel value="Imagen" />
+                    <p:inputText value="#{JSFMB_Restaurante.restaurante.imagen}"/>
+                    <p:commandButton value="Registrar" id="btnCliente" action="#{JSFMB_Restaurante.grabarRestaurante()}"/>
                 </p:panelGrid>
             </h:form>
         </h:body>
