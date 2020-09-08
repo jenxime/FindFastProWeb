@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Find Fast</title>
+        <h:outputStylesheet library="css" name="StylesFindFast.css"/>
+    </h:head>
+    <h:body id="Principal">
+        <h:form>  
+            <p:growl id="messages"/>
+            <p:menubar >
+                <p:menuitem  value="Find Fast"/>
+                <f:facet name="options">
+                    <p:button value="Ingresar" outcome="Registro"/>
+                </f:facet>
+            </p:menubar>
+        </h:form>
+        <p:dataGrid id="data" var="menu" value="#{JSFMB_Plato.listaPlato}" columns="3" rows="12">
+            <p:column id="Panel">
+                <p:panel id="Panel1" header="#{menu.nombre}">
+                    <h:panelGrid columns="1">
+                        <h:graphicImage value="/Recursos/Imagenes/MenuLocales/#{menu.imagen}" width="250" height="250"/>
+                        <h:outputText value="#{menu.descripcionplato}" />
+                        <h:outputText value="#{menu.categoria}" />
+                        <h:outputText value="#{menu.precioplato}" />
+                        <h:outputText value="#{menu.estadoplato}" />
+                    </h:panelGrid>
+                    <h:commandButton value="Agregar" id="btnAgregar"  action="#{JSFMB_Plato.agregar()}" />
+                </p:panel>
+            </p:column>
+        </p:dataGrid>
+        <p:dataTable var="pedido" value="#{JSFMB_CarritoCompra.listaPedido}">
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="N0" />
+                </f:facet>
+                <h:outputText value="#{pedido.plato.nombre}" />
+            </p:column>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Nombre" />
+                </f:facet>
+                <h:outputText value="#{pedido.plato.nombre}" />
+            </p:column>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Cantidad" />
+                </f:facet>
+                <h:outputText value="#{pedido.cantidad}" />
+            </p:column>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Precio Unitario" />
+                </f:facet>
+                <h:outputText value="#{pedido.plato.precioplato}" />
+            </p:column>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="precio total" />
+                </f:facet>
+                <h:outputText value="#{pedido.plato.nombre}" />
+            </p:column>
+        </p:dataTable>
+        <p:commandButton value="Comprar" id="btnComprar" action="Factura.xhtml"/>
+    </h:body>
+</html>
+

@@ -9,7 +9,7 @@
         <h:head>
             <f:facet name="first">
                 <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
-                <title>Registro de Restaurante</title>
+                <title>Find Fast</title>
             </f:facet>
         </h:head>
 
@@ -32,7 +32,7 @@
                     <p:inputText value="#{JSFMB_Restaurante.restaurante.descripcion}"/>
                     <p:outputLabel value="Imagen" />
                     <p:inputText value="#{JSFMB_Restaurante.restaurante.imagen}"/>
-                    <p:commandButton value="Registrar" id="btnCliente" action="#{JSFMB_Restaurante.grabarRestaurante()}"/>
+                    <p:commandButton value="RegistrarRestaurante" id="btnRegistrarRestaurante" action="#{JSFMB_Restaurante.grabarRestaurante()}"/>
                 </p:panelGrid>
             </h:form>
         </h:body>

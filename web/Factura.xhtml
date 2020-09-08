@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Find Fast</title>
+        <h:outputStylesheet library="css" name="StylesFindFast.css"/>
+    </h:head>
+    <h:body>
+        <h:form>  
+            <p:growl id="messages"/>
+            <p:menubar >
+                <p:menuitem  value="Find Fast"/>
+                <f:facet name="options">
+                    <p:button value="Ingresar" outcome="Registro"/>
+                </f:facet>
+            </p:menubar>
+        </h:form>
+        <h:outputText value="Factura"/>
+        <br/>
+        <h:outputText value="Empresa: " />
+        <p:inputMask value="#{JSFMB_Restaurante.restaurante.nombre}" mask=""/>
+        <h:outputText value="Email: " />
+        <p:inputMask value="#{JSFMB_Restaurante.restaurante.correo}" mask=""/>
+        <h:outputText value="Direccion: " />
+        <p:inputMask value="#{JSFMB_Restaurante.restaurante.direccion}" mask=""/>
+        <h:outputText value="Telefono: " />
+        <p:inputMask value="#{JSFMB_Restaurante.restaurante.telefono}" mask="99999999999"/>
+    </h:body>
+</html>
+
