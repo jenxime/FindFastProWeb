@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <f:view contentType="text/html">
+        <h:head>
+            <title>Inicia Sesion</title>
+        </h:head>
+
+        <body>
+            <p:panel header="Bienvenido a FindFast">  
+                <h:form>
+                    <p:messages autoUpdate="true" showDetail="true"/>
+                    <p:panelGrid columns="2" >
+                        <f:facet name="header">
+                            Inicia Sesion o Registrate
+                        </f:facet>
+
+                        <h:outputLabel for="txtUsuario" value="Usuario"/>
+                        <p:inputText id="txtUsuario" value="#{JSFMB_InicioSesion.usuario}" required="true"/>
+
+                        <h:outputLabel for="txtClave" value="Clave"/>
+                        <p:password id="txtClave" value="#{JSFMB_InicioSesion.clave}" required="true"/>
+                        <f:facet name="footer" >
+                            <p:commandButton type="Button" value="Inicia Sesion" icon="ui-icon-key" action="#{JSFMB_InicioSesion.iniciarSesion()}" />
+                        </f:facet>
+                    </p:panelGrid>
+                </h:form>
+                <h:link outcome="Registro" value="Eres nuevo? Registrate aqui!" />
+            </p:panel>
+        </body>
+    </f:view>
+</html>
